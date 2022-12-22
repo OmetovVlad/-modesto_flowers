@@ -1,3 +1,21 @@
 <header class="header_menu">
-  @@include('_nav.html')
+  <div class="container">
+      <a href="/" class="logo">
+        <img src="@img/logo.svg">
+      </a>
+
+      @@include('_nav.html')
+
+      <a href="tel:+36787547894" class="phone">+3 67 8754 7894</a>
+
+      <div class="languages">
+        <a href="#ru" class="language active">Ru</a>
+        <a href="#eng" class="language">Eng</a>
+      </div>
+
+      <div class="profile">
+        <button class="button button--text">Войти</button>
+        <button class="button button--only_border">Создать аккаунт</button>
+      </div>
+  </div>
 </header>

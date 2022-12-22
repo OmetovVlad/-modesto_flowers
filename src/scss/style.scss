@@ -7,6 +7,9 @@
 // Переменны (цвета, скорость transition и пр)
 @import "_variables";
 
+@import "_header_menu";
+@import "_start_screen";
+
 *{
     outline: none;
     box-sizing: border-box;
@@ -17,8 +20,78 @@ body{
     padding: 0;
     min-width: 320px;
     font-family: $main_font;
+    color: $color01;
 }
 
 a {
     text-decoration: none;
+}
+
+@media (min-width: 1480px) {
+    .container {
+        max-width: calc(1420px + 12px * 2);
+    }
+}
+
+// Titles
+.title {
+    font-family: $secondary_font;
+    font-weight: 400;
+    margin: 0 0 40px;
+}
+h1.title {
+    font-size: 56px;
+    line-height: 67px;
+}
+
+.subtitle {
+    p {
+        margin: 0;
+        font-size: 26px;
+        line-height: 31px;
+        font-weight: 300;
+    }
+}
+
+// Buttons
+.button {
+    display: block;
+    background: $color02;
+    border-radius: 12px;
+    padding: 25px 34px;
+    font-family: $main_font;
+    color: $color01;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1;
+    border: 0;
+    transition: all $animation_speed;
+    &--light {
+        background: $color04;
+    }
+    &--text,
+    &--only_border {
+        background: initial;
+        font-weight: 500;
+    }
+    &--text {
+        padding: 15px 30px;
+    }
+    &--only_border {
+        padding: 14px 29px;
+        border: 1px solid #000000;
+    }
+    &:hover {
+        color: $color01;
+        opacity: .75;
+    }
+}
+
+.buttons_line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    & > .button {
+        margin: 0 10px;
+    }
 }
