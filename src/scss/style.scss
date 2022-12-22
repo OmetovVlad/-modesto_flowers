@@ -1,0 +1,24 @@
+// Bootstrap
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// Шрифты
+@import "fonts";
+
+// Переменны (цвета, скорость transition и пр)
+@import "_variables";
+
+*{
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+    font-family: $main_font;
+}
+
+a {
+    text-decoration: none;
+}
