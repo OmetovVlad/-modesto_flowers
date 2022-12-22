@@ -9,6 +9,7 @@
 
 @import "_header_menu";
 @import "_start_screen";
+@import "_form_screen";
 
 *{
     outline: none;
@@ -43,6 +44,10 @@ h1.title {
     font-size: 56px;
     line-height: 67px;
 }
+h3.title {
+    font-size: 36px;
+    line-height: 43px;
+}
 
 .subtitle {
     p {
@@ -66,6 +71,8 @@ h1.title {
     line-height: 1;
     border: 0;
     transition: all $animation_speed;
+    text-align: center;
+    cursor: pointer;
     &--light {
         background: $color04;
     }
@@ -91,7 +98,50 @@ h1.title {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0 -10px;
     & > .button {
         margin: 0 10px;
+    }
+}
+
+form {
+    .button {
+        margin-top: 40px;
+        padding: 16px 32px;
+    }
+    .buttons_line {
+        margin-top: 40px;
+    }
+}
+
+.input {
+    span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        display: block;
+        margin-bottom: 10px;
+    }
+    .captcha {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    input {
+        font-weight: 500;
+        background: #FFF8E1;
+        border-radius: 6px;
+        border: 0;
+        padding: 16px 8px;
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        color: $color01;
+        &::placeholder {
+            color: $color07;
+        }
+    }
+    & + & {
+        margin-top: 20px;
     }
 }
