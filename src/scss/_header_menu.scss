@@ -3,8 +3,11 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 20px 0;
+  padding: 8px 0;
   z-index: 1;
+  @media (min-width: 768px) {
+    padding: 20px 0;
+  }
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -12,25 +15,38 @@
     align-items: center;
   }
   .logo {
-    width: 98px;
+    width: 48px;
+    @media (min-width: 768px) {
+      width: 98px;
+    }
     img {
       width: 100%;
       display: block;
     }
   }
   nav {
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    a {
-      color: $color01;
-      font-weight: 500;
-      font-size: 18px;
-      display: block;
-      padding: 20px;
-      transition: all $animation_speed;
-      &:Hover {
-        opacity: .75;
+    display: none;
+    @media (min-width: 992px) {
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      a {
+        color: $color01;
+        font-weight: 500;
+        font-size: 16px;
+        display: block;
+        padding: 20px 15px;
+        transition: all $animation_speed;
+
+        &:Hover {
+          opacity: .75;
+        }
+      }
+    }
+    @media (min-width: 1200px) {
+      a {
+        font-size: 18px;
+        padding: 20px;
       }
     }
   }
@@ -39,29 +55,68 @@
     color: $color01;
     font-family: $supporting_font;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1;
-    padding: 16px 30px;
+    padding: 8px;
     display: block;
-    margin-right: 20px;
+    margin-right: 10px;
     transition: all $animation_speed;
+    margin-left: auto;
     &:Hover {
       opacity: .75;
+    }
+    @media (min-width: 768px) {
+      font-size: 20px;
+      padding: 16px 30px;
+      margin-right: 20px;
+    }
+    @media (min-width: 992px) {
+      margin-left: initial;
+      font-size: 16px;
+      padding: 16px 15px;
+      margin-right: 10px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 20px;
+      padding: 16px 30px;
+      margin-right: 20px;
     }
   }
 
   .languages {
     display: flex;
     flex-wrap: wrap;
-    margin-right: 20px;
+    margin-right: 10px;
+    padding: 0 4px;
+    @media (min-width: 768px) {
+      margin-right: 20px;
+      padding: 0;
+    }
+    @media (min-width: 992px) {
+      margin-right: 10px;
+    }
+    @media (min-width: 1200px) {
+      margin-right: 20px;
+    }
     .language {
       display: block;
       font-weight: 500;
-      font-size: 20px;
-      line-height: 23px;
-      padding: 16px 4px;
+      font-size: 16px;
+      line-height: 19px;
+      padding: 8px 4px;
       color: $color06;
       transition: all $animation_speed;
+      @media (min-width: 768px) {
+        font-size: 20px;
+        line-height: 23px;
+        padding: 16px 4px;
+      }
+      @media (min-width: 992px) {
+        font-size: 16px;
+      }
+      @media (min-width: 1200px) {
+        font-size: 20px;
+      }
       &:Hover {
         opacity: .75;
       }
@@ -75,8 +130,32 @@
   .profile {
     display: flex;
     flex-wrap: wrap;
-    .button + .button {
-      margin-left: 10px;
+    @media (min-width: 1200px) {
+      .button + .button {
+        margin-left: 10px;
+      }
+    }
+    .login {
+      display: none;
+      @media (min-width: 768px) {
+        display: block;
+      }
+    }
+    .create_account {
+      display: none;
+      @media (min-width: 992px) {
+        display: block;
+      }
+    }
+  }
+
+  .mobile_menu {
+    cursor: pointer;
+    @media (min-width: 768px) {
+      margin-left: 20px;
+    }
+    @media (min-width: 992px) {
+      display: none;
     }
   }
 }
