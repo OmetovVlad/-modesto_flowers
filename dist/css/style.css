@@ -7436,7 +7436,7 @@ fieldset:disabled .btn {
 
 .footer {
   background: #372E11;
-  padding: 80px 0;
+  padding: 32px 0;
   color: #FFFBED;
   font-weight: 500;
   font-size: 18px;
@@ -7452,6 +7452,56 @@ fieldset:disabled .btn {
 
 .footer a.link:Hover {
   opacity: 0.75;
+}
+
+.footer .footer_line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .footer_line .offices_and_social,
+.footer .footer_line .offices {
+  width: 100%;
+}
+
+.footer .footer_line .offices_and_social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+.footer .footer_line .offices_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.footer .footer_line .offices_list .office {
+  width: 100%;
+}
+
+.footer .footer_line .offices_list .office + .office {
+  margin-top: 16px;
+}
+
+.footer .footer_line .social {
+  margin: 48px 0;
 }
 
 .footer .contacts_list .link {
@@ -10108,6 +10158,15 @@ form .buttons_line {
     height: 48px;
   }
 
+  .footer .footer_line .offices_and_social,
+  .footer .footer_line .communication {
+    width: 257px;
+  }
+
+  .footer .footer_line .social {
+    margin-bottom: 0;
+  }
+
   .title {
     margin-bottom: 40px;
   }
@@ -10132,6 +10191,10 @@ form .buttons_line {
   .button {
     font-size: 18px;
     padding: 25px 34px;
+  }
+
+  .button--mini {
+    padding: 12px 32px;
   }
 
   .buttons_line {
@@ -11383,6 +11446,33 @@ form .buttons_line {
   .form_screen .form form > div .next_step {
     height: auto;
   }
+
+  .footer {
+    padding: 80px 0;
+  }
+
+  .footer .footer_line .offices_and_social,
+  .footer .footer_line .offices {
+    width: calc(100% - 204px - 30px);
+  }
+
+  .footer .footer_line .offices_list .office {
+    width: calc(50% - 20px);
+  }
+
+  .footer .footer_line .offices_list .office + .office {
+    margin-top: 0;
+  }
+
+  .footer .footer_line .social {
+    margin-top: 0;
+  }
+
+  .footer .footer_line .social,
+  .footer .footer_line .communication {
+    margin-left: 30px;
+    width: 204px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -12625,6 +12715,16 @@ form .buttons_line {
   .header_menu .profile .button + .button {
     margin-left: 10px;
   }
+
+  .footer .footer_line .offices_and_social,
+  .footer .footer_line .offices {
+    width: calc(100% - 204px - 100px);
+  }
+
+  .footer .footer_line .social,
+  .footer .footer_line .communication {
+    margin-left: 100px;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -13780,6 +13880,16 @@ form .buttons_line {
 }
 
 @media (min-width: 1480px) {
+  .footer .footer_line .offices_and_social,
+  .footer .footer_line .offices {
+    width: calc(100% - 204px - 229px);
+  }
+
+  .footer .footer_line .social,
+  .footer .footer_line .communication {
+    margin-left: 229px;
+  }
+
   .container {
     max-width: 1444px;
   }

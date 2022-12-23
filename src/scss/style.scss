@@ -115,6 +115,9 @@ h4.title {
     }
     &--mini {
         padding: 12px;
+        @media (min-width: 768px) {
+            padding: 12px 32px;
+        }
     }
     &--icon {
         display: flex;
