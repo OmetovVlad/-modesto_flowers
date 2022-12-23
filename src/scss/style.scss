@@ -10,6 +10,7 @@
 @import "_header_menu";
 @import "_start_screen";
 @import "_form_screen";
+@import "_footer";
 
 *{
     outline: none;
@@ -47,6 +48,11 @@ h1.title {
 h3.title {
     font-size: 36px;
     line-height: 43px;
+}
+h4.title {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 24px;
 }
 
 .subtitle {
@@ -87,6 +93,19 @@ h3.title {
     &--only_border {
         padding: 14px 29px;
         border: 1px solid #000000;
+    }
+    &--mini {
+        padding: 12px;
+    }
+    &--icon {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        img {
+            display: block;
+            margin-left: 10px;
+        }
     }
     &:hover {
         color: $color01;

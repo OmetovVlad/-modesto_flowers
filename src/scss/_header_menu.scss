@@ -28,6 +28,10 @@
       font-size: 18px;
       display: block;
       padding: 20px;
+      transition: all $animation_speed;
+      &:Hover {
+        opacity: .75;
+      }
     }
   }
 
@@ -40,6 +44,10 @@
     padding: 16px 30px;
     display: block;
     margin-right: 20px;
+    transition: all $animation_speed;
+    &:Hover {
+      opacity: .75;
+    }
   }
 
   .languages {
@@ -53,8 +61,13 @@
       line-height: 23px;
       padding: 16px 4px;
       color: $color06;
+      transition: all $animation_speed;
+      &:Hover {
+        opacity: .75;
+      }
       &.active {
         color: $color01;
+        pointer-events: none;
       }
     }
   }

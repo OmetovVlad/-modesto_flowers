@@ -7254,6 +7254,13 @@ fieldset:disabled .btn {
   font-size: 18px;
   display: block;
   padding: 20px;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.header_menu nav a:Hover {
+  opacity: 0.75;
 }
 
 .header_menu .phone {
@@ -7265,6 +7272,13 @@ fieldset:disabled .btn {
   padding: 16px 30px;
   display: block;
   margin-right: 20px;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.header_menu .phone:Hover {
+  opacity: 0.75;
 }
 
 .header_menu .languages {
@@ -7283,10 +7297,18 @@ fieldset:disabled .btn {
   line-height: 23px;
   padding: 16px 4px;
   color: #9B9B99;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.header_menu .languages .language:Hover {
+  opacity: 0.75;
 }
 
 .header_menu .languages .language.active {
   color: #372E11;
+  pointer-events: none;
 }
 
 .header_menu .profile {
@@ -7340,7 +7362,7 @@ fieldset:disabled .btn {
 .form_screen .form {
   padding: 80px;
   background-color: #FFFBED;
-  background-position: left bottom;
+  background-position: center bottom;
   background-repeat: no-repeat;
 }
 
@@ -7424,6 +7446,49 @@ fieldset:disabled .btn {
   opacity: 1;
 }
 
+.footer {
+  background: #372E11;
+  padding: 80px 0;
+  color: #FFFBED;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.footer a.link {
+  color: #FFFBED;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.footer a.link:Hover {
+  opacity: 0.75;
+}
+
+.footer .contacts_list .link {
+  display: block;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+.footer .contacts_list .link + a {
+  margin-top: 16px;
+}
+
+.footer .contacts_list .phone {
+  font-weight: 500;
+  font-family: Roboto;
+}
+
+.footer .copy {
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 48px;
+  display: block;
+  color: #B9B3B3;
+}
+
 * {
   outline: none;
   -webkit-box-sizing: border-box;
@@ -7458,6 +7523,13 @@ h3.title,
 .title.h3 {
   font-size: 36px;
   line-height: 43px;
+}
+
+h4.title,
+.title.h4 {
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 24px;
 }
 
 .subtitle p {
@@ -7502,6 +7574,29 @@ h3.title,
 .button--only_border {
   padding: 14px 29px;
   border: 1px solid #000000;
+}
+
+.button--mini {
+  padding: 12px;
+}
+
+.button--icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.button--icon img {
+  display: block;
+  margin-left: 10px;
 }
 
 .button:hover {
