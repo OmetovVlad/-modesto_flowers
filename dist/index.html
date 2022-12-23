@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тестовое :: Modesto Flowers</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20221224013938">
+    <link rel="stylesheet" href="css/style.min.css?_v=20221224052725">
 </head>
     <body>
         <header class="header_menu">
@@ -14,10 +14,15 @@
         <img src="img/logo.svg">
       </a>
 
-      <nav>
+      <nav class="menu_list">
     <a href="#Магазины">Магазины</a>
     <a href="#Контакты">Контакты</a>
     <a href="#О_нас">О нас</a>
+
+    <div class="button_mobile">
+        <button class="button button--text login">Войти</button>
+        <button class="button button--only_border create_account">Создать аккаунт</button>
+    </div>
 </nav>
 
       <a href="tel:+36787547894" class="phone">+3 67 8754 7894</a>
@@ -73,66 +78,68 @@
               <p>Регистрация на нашем сайте занимает несколько минут, просим ответить на все вопросы полностью и корректно! После подтверждения регистрации вы попадёте в систему, где большинство процессов автоматизированы, что сэкономит ваше время и деньги!</p>
             </div>
             <div class="col-12 col-lg-5">
-              <form action="" method="post">
-<!--                <div class="form&#45;&#45;first active">-->
-<!--                  <div class="input">-->
-<!--                    <span>Ваше имя</span>-->
-<!--                    <input type="text" placeholder="Фролова Александра Васильевна">-->
-<!--                  </div>-->
-<!--                  <div class="input">-->
-<!--                    <span>Название Компании</span>-->
-<!--                    <input type="text" placeholder="ООО Атлантика">-->
-<!--                  </div>-->
-<!--                  <div class="input">-->
-<!--                    <span>E-mail</span>-->
-<!--                    <input type="email" placeholder="flolovaalexa@com.ru">-->
-<!--                  </div>-->
-<!--                  <div class="input">-->
-<!--                    <span>Номер телефона</span>-->
-<!--                    <input type="text" placeholder="+7 (XXX) - XXX XX XX">-->
-<!--                  </div>-->
-<!--                  <div class="input">-->
-<!--                    <span>Промокод</span>-->
-<!--                    <input type="text" placeholder="HGF864">-->
-<!--                  </div>-->
+              <form action="/" method="post">
 
-<!--                  <span class="button next_step">Далее</span>-->
-<!--                </div>-->
+                <div class="form--first active">
+                  <div class="input">
+                    <span>Ваше имя</span>
+                    <input type="text" name="name" placeholder="Фролова Александра Васильевна">
+                  </div>
+                  <div class="input">
+                    <span>Название Компании</span>
+                    <input type="text" name="company" placeholder="ООО Атлантика">
+                  </div>
+                  <div class="input">
+                    <span>E-mail</span>
+                    <input type="email" name="email" placeholder="flolovaalexa@com.ru">
+                  </div>
+                  <div class="input">
+                    <span>Номер телефона</span>
+                    <input type="text" name="phone" placeholder="+7 (XXX) - XXX XX XX">
+                  </div>
+                  <div class="input">
+                    <span>Промокод</span>
+                    <input type="text" name="code" placeholder="HGF864">
+                  </div>
+
+                  <span class="button next_step">Далее</span>
+                </div>
 
                 <div class="form--second">
                   <div>
                     <div class="input">
                       <span>Пароль</span>
-                      <input type="password" placeholder="Создайте пароль">
+                      <input type="password" name="password" placeholder="Создайте пароль">
                     </div>
                     <div class="input">
                       <span>Подтвердите пароль</span>
-                      <input type="password" placeholder="Создайте пароль">
+                      <input type="password" name="password-repeat" placeholder="Создайте пароль">
                     </div>
                     <div class="input">
                       <picture><source srcset="img/captcha.webp" type="image/webp"><img class="captcha d-md-none d-lg-block" src="img/captcha.png"></picture>
                       <span>Введите символы из картинки</span>
-                      <input type="text" placeholder="Код из картинки">
-                    </div>
-                    <div class="input">
-                      <span>Номер телефона</span>
-                      <input type="text" placeholder="+7 (XXX) - XXX XX XX">
+                      <input type="text" name="captcha" placeholder="Код из картинки">
                     </div>
                   </div>
 
                   <div>
+                    <div class="input">
+                      <picture><source srcset="img/captcha.webp" type="image/webp"><img class="captcha d-none d-md-block d-lg-none" src="img/captcha.png"></picture>
+                    </div>
+
                     <div class="buttons_line">
-                      <span class="button button--light prev_step">Далее</span>
-                      <input class="button" type="submit" value="Подтвердить">
+                      <span class="button button--light prev_step">Назад</span>
+                      <input class="button" name="send" type="submit" value="Подтвердить">
                     </div>
 
                     <div class="privat">
                       <label>
-                        <input type="checkbox">
+                        <input type="checkbox" name="privat" checked>
                         <span>Я даю согласие на обработку моих персональных данных и правовых документов</span>
                       </label>
                     </div>
                   </div>
+                </div>
 
               </form>
             </div>
@@ -191,6 +198,6 @@
     </div>
 </footer>
 
-        <script src="js/app.min.js?_v=20221224013938"></script>
+        <script src="js/app.min.js?_v=20221224052725"></script>
     </body>
 </html>

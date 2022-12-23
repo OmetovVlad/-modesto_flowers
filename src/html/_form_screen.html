@@ -10,66 +10,68 @@
               <p>Регистрация на нашем сайте занимает несколько минут, просим ответить на все вопросы полностью и корректно! После подтверждения регистрации вы попадёте в систему, где большинство процессов автоматизированы, что сэкономит ваше время и деньги!</p>
             </div>
             <div class="col-12 col-lg-5">
-              <form action="" method="post">
-<!--                <div class="form&#45;&#45;first active">-->
-<!--                  <div class="input">-->
-<!--                    <span>Ваше имя</span>-->
-<!--                    <input type="text" placeholder="Фролова Александра Васильевна">-->
-<!--                  </div>-->
-<!--                  <div class="input">-->
-<!--                    <span>Название Компании</span>-->
-<!--                    <input type="text" placeholder="ООО Атлантика">-->
-<!--                  </div>-->
-<!--                  <div class="input">-->
-<!--                    <span>E-mail</span>-->
-<!--                    <input type="email" placeholder="flolovaalexa@com.ru">-->
-<!--                  </div>-->
-<!--                  <div class="input">-->
-<!--                    <span>Номер телефона</span>-->
-<!--                    <input type="text" placeholder="+7 (XXX) - XXX XX XX">-->
-<!--                  </div>-->
-<!--                  <div class="input">-->
-<!--                    <span>Промокод</span>-->
-<!--                    <input type="text" placeholder="HGF864">-->
-<!--                  </div>-->
+              <form action="/" method="post">
 
-<!--                  <span class="button next_step">Далее</span>-->
-<!--                </div>-->
+                <div class="form--first active">
+                  <div class="input">
+                    <span>Ваше имя</span>
+                    <input type="text" name="name" placeholder="Фролова Александра Васильевна">
+                  </div>
+                  <div class="input">
+                    <span>Название Компании</span>
+                    <input type="text" name="company" placeholder="ООО Атлантика">
+                  </div>
+                  <div class="input">
+                    <span>E-mail</span>
+                    <input type="email" name="email" placeholder="flolovaalexa@com.ru">
+                  </div>
+                  <div class="input">
+                    <span>Номер телефона</span>
+                    <input type="text" name="phone" placeholder="+7 (XXX) - XXX XX XX">
+                  </div>
+                  <div class="input">
+                    <span>Промокод</span>
+                    <input type="text" name="code" placeholder="HGF864">
+                  </div>
+
+                  <span class="button next_step">Далее</span>
+                </div>
 
                 <div class="form--second">
                   <div>
                     <div class="input">
                       <span>Пароль</span>
-                      <input type="password" placeholder="Создайте пароль">
+                      <input type="password" name="password" placeholder="Создайте пароль">
                     </div>
                     <div class="input">
                       <span>Подтвердите пароль</span>
-                      <input type="password" placeholder="Создайте пароль">
+                      <input type="password" name="password-repeat" placeholder="Создайте пароль">
                     </div>
                     <div class="input">
                       <img class="captcha d-md-none d-lg-block" src="@img/captcha.png">
                       <span>Введите символы из картинки</span>
-                      <input type="text" placeholder="Код из картинки">
-                    </div>
-                    <div class="input">
-                      <span>Номер телефона</span>
-                      <input type="text" placeholder="+7 (XXX) - XXX XX XX">
+                      <input type="text" name="captcha" placeholder="Код из картинки">
                     </div>
                   </div>
 
                   <div>
+                    <div class="input">
+                      <img class="captcha d-none d-md-block d-lg-none" src="@img/captcha.png">
+                    </div>
+
                     <div class="buttons_line">
-                      <span class="button button--light prev_step">Далее</span>
-                      <input class="button" type="submit" value="Подтвердить">
+                      <span class="button button--light prev_step">Назад</span>
+                      <input class="button" name="send" type="submit" value="Подтвердить">
                     </div>
 
                     <div class="privat">
                       <label>
-                        <input type="checkbox">
+                        <input type="checkbox" name="privat" checked>
                         <span>Я даю согласие на обработку моих персональных данных и правовых документов</span>
                       </label>
                     </div>
                   </div>
+                </div>
 
               </form>
             </div>

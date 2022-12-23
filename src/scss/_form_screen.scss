@@ -16,8 +16,11 @@
     }
   }
   .form {
-    padding: 32px;
+    padding: 20px;
     background-color: $color05;
+    @media (min-width: 768px) {
+      padding: 32px;
+    }
     @media (min-width: 992px) {
       background-image: url("@img/form_block_bg.jpg");
       background-position: center bottom;
@@ -32,6 +35,33 @@
     form {
       position: relative;
       margin-top: 32px;
+      & > div {
+        & {
+          opacity: 0;
+          pointer-events: none;
+          transition: all $animation_speed;
+        }
+        &.form--second {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+        }
+        &.active {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+      .form--second {
+        .captcha {
+          max-width: 280px;
+          margin-left: auto;
+          margin-right: auto;
+          @media (min-width: 992px) {
+            max-width: 100%;
+          }
+        }
+      }
       @media (min-width: 768px) {
         margin-top: 58px;
         & > div {
@@ -39,11 +69,16 @@
           flex-wrap: wrap;
           justify-content: space-between;
           align-items: end;
+          &.form--second {
+            align-items: start;
+          }
           & > * {
             width: calc(50% - 20px);
           }
-          .input:nth-child(2) {
-            margin-top: 0;
+          &.form--first{
+            .input:nth-child(2) {
+              margin-top: 0;
+            }
           }
           .next_step {
             height: 48px;
@@ -59,12 +94,33 @@
           & > * {
             width: 100%;
           }
-          .input:nth-child(2) {
-            margin-top: 20px;
+          &.form--first{
+            .input:nth-child(2) {
+              margin-top: 20px;
+            }
           }
           .next_step {
             height: auto;
           }
+        }
+      }
+    }
+    .buttons_line {
+      margin-left: -4px;
+      margin-right: -4px;
+      .button {
+        padding: 16px 28px;
+        margin-left: 4px;
+        margin-right: 4px;
+        width: auto;
+        @media (min-width: 992px) {
+          padding: 16px;
+        }
+        @media (min-width: 1200px) {
+          padding: 16px 32px;
+        }
+        @media (min-width: 1480px) {
+          padding: 16px 35px;
         }
       }
     }

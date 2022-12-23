@@ -20,9 +20,32 @@
 body{
     margin: 0;
     padding: 0;
-    min-width: 320px;
+    min-width: 360px;
     font-family: $main_font;
     color: $color01;
+    overflow-x: hidden;
+    @media (max-width: 991px) {
+        .header_menu::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: #000;
+            opacity: 0;
+            z-index: 2;
+            pointer-events: none;
+            transition: all $animation_speed;
+        }
+        &.open-menu {
+            overflow: hidden;
+            .header_menu::after {
+                opacity: 0.5;
+                pointer-events: auto;
+            }
+        }
+    }
 }
 
 a {
@@ -108,10 +131,16 @@ h4.title {
     }
     &--text {
         padding: 15px 30px;
+        @media (min-width: 768px) {
+            padding: 15px 30px;
+        }
     }
     &--only_border {
         padding: 14px 29px;
         border: 1px solid #000000;
+        @media (min-width: 768px) {
+            padding: 14px 29px;
+        }
     }
     &--mini {
         padding: 12px;

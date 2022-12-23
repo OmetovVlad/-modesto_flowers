@@ -9,6 +9,9 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  @media (min-width: 768px) {
+    background-image: url("@img/header_bg_tablet.jpg");
+  }
   @media (min-width: 992px) {
     background-image: url("@img/header_bg.jpg");
   }
